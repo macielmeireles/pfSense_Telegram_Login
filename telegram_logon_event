@@ -1,0 +1,18 @@
+--- /etc/inc/util.inc.orig	2023-12-20 10:28:48.175633000 -0300
++++ /etc/inc/util.inc	2023-12-20 10:29:12.153208000 -0300
+@@ -1940,7 +1940,15 @@
+ 	global $g;
+ 	$page = $_SERVER['SCRIPT_NAME'];
+ 	$level = config_path_enabled('system/webgui', 'quietlogin') ? LOG_NOTICE|LOG_AUTH : LOG_AUTH;
++	$ip = substr($error, strrpos($error, 'from: ') + 6);
++	$user = substr($error, strpos(strtolower($error), "'") + 1, strrpos(strtolower($error), "'") - strpos(strtolower($error), "'") - 1);
++	if (strpos(strtolower($error), 'successful login for user') !== false) {
++		$error = "\n✅ Successful Login: '{$user}'\n\nIP: {$ip}\n\n";
++	} elseif (strpos(strtolower($error), 'authentication error for user') !== false) {
++		$error = "\n❌ Unsuccessful Login: '{$user}'\n\nIP: {$ip}\n\n";
++	}
+ 	syslog($level, "{$page}: {$error}");
++	notify_all_remote($error);
+ 	if (g_get('debug')) {
+ 		syslog(LOG_WARNING, var_export(debug_backtrace()));
+ 	}
