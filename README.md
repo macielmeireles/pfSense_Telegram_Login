@@ -7,11 +7,18 @@
 - Brazilian Pix: d56da244-4dc5-4f77-be6d-28e94fdd46b2 <br />
 - Paypal:  https://bit.ly/MonitTelegram <br /><br />
 
+## Credits
+- Original Project: https://github.com/CitraIT/pfsense_citra_patches/tree/main/telegram_logon_event
+- Author: Luciano Rodrigues
+
+<br /><br />
 
 
 # pfSense_Telegram_Login - Overview
 Patch for pfSense: When someone logs in or tries to log in to pfSense, it sends a standard message to Telegram. This patch changes the standard message to a custom message that is easier to read and visually more appealing. <br />
 
+## Tested Versions
+  2.7.0, 2.7.1, 2.7.2
 
 ## Screenshot
 soon
