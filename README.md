@@ -32,6 +32,7 @@ Patch for pfSense: When someone logs in or tries to log in to pfSense, it sends 
 
 
 ### Installation
+0) Install "System Patches" package via Package Manager (System - Package Manager).
 1) Log in as an administrator via pfSense GUI.
 2) Click on System, Patches.
 3) Click on Add New Patch.
@@ -55,6 +56,7 @@ Patch para pfSense: Quando alguém faz login ou tenta fazer login no pfSense, el
 
 
 ### Instalação
+0) Instale o pacote "System Patches" via Package Manager (System - Package Manager).
 1) Faça login como administrador via GUI do pfSense.
 2) Clique em Sistema, Patches.
 3) Clique em Adicionar Novo Patch.
