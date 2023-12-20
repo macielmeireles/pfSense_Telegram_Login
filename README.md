@@ -21,7 +21,7 @@ Patch for pfSense: When someone logs in or tries to log in to pfSense, it sends 
   2.7.0, 2.7.1, 2.7.2
 
 ## Screenshot
-soon
+![Screenshot](https://github.com/macielmeireles/pfSense_Telegram_Login/blob/main/screenshot.png)
 
 
 ### Prerequisites
